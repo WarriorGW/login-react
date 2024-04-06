@@ -5,11 +5,11 @@ function Home() {
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		const username = document.cookie.replace(
-			/(?:(?:^|.*;\s*)username\s*\=\s*([^;]*).*$)|^.*$/,
+		const email = document.cookie.replace(
+			/(?:(?:^|.*;\s*)email\s*\=\s*([^;]*).*$)|^.*$/,
 			"$1"
 		);
-		if (!username) {
+		if (!email) {
 			navigate("/login");
 		}
 	}, []);
